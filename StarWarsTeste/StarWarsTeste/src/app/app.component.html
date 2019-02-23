@@ -1,0 +1,36 @@
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <section>
+          <!--
+          <ul>
+            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Personagens</button></li>
+            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Filmes</button></li>
+            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Naves</button></li>
+            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Veículos</button></li>
+            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Espécies</button></li>
+            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Planetas</button></li>
+          </ul>
+          -->
+          <div *ngIf="personagensListaDTO">
+            <table class="table">
+              <tbody>
+                <tr *ngFor="let personagem of personagensListaDTO.results; index as i">
+                  <td (click)=" ConsultarInfo(personagem)">{{ personagem.name }}</td>
+                </tr>
+              </tbody>
+              <button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Anterior</button>
+              <button (click)="ConsultarPaginaPosterior()" type="button" class="btn btn-primary">Próxima</button>
+            </table>
+          </div>
+        </section>
+      </div>
+      <div class="col-6">
+        <section>
+          <app-info></app-info>
+        </section>
+      </div>
+    </div>
+  </div>
+</article>
