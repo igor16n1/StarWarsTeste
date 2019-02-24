@@ -6,6 +6,7 @@ import { EspecieDTO } from './../Classes/especie-dto';
 import { CategoriaBusca } from './../Enum/categoria-busca.enum';
 import { PersonagemDTO } from './../Classes/personagem-dto';
 import { Injectable } from '@angular/core';
+import { ElementRef } from "@angular/core";
 
 @Injectable({
   providedIn: 'root'
@@ -18,12 +19,13 @@ export class SingletonService {
   public planetaDTO: PlanetaDTO;
   public veiculoDTO: VeiculoDTO;
   public categoriaBusca: CategoriaBusca;
+  public modal: any;
   constructor() { 
     this.personagemDTO = new PersonagemDTO();
     this.especieDTO = new EspecieDTO();  
     this.filmeDTO = new FilmeDTO();
     this.naveDTO = new NaveDTO();
     this.planetaDTO = new PlanetaDTO();
-    this.veiculoDTO = new VeiculoDTO();
+    this.veiculoDTO = new VeiculoDTO();    
   }
 }

@@ -25,11 +25,14 @@
     <h5 class="card-title">MGLT</h5>
     <div>{{this.singletonService.naveDTO.MGLT}}</div>
     <h5 class="card-title">Classe</h5>
-    <div>{{this.singletonService.naveDTO.starship_class}}</div>
-    
+    <div>{{this.singletonService.naveDTO.starship_class}}</div>    
     <h5 class="card-title">Pilotos</h5>
-
+    <div *ngFor="let pilot of this.singletonService.naveDTO.pilots">
+      <div>{{pilot}}</div>
+    </div>
     <h5 class="card-title">Filmes</h5>
-    
+    <div *ngFor="let film of this.singletonService.naveDTO.films">
+      <div>{{film}}</div>
+    </div>
   </div>
 </div>

@@ -17,11 +17,14 @@
     <h5 class="card-title">Superfície da água</h5>
     <div>{{this.singletonService.planetaDTO.surface_water}}</div>
     <h5 class="card-title">População</h5>
-    <div>{{this.singletonService.planetaDTO.population}}</div>    
-
+    <div>{{this.singletonService.planetaDTO.population}}</div>
     <h5 class="card-title">Moradores</h5>
-
+    <div *ngFor="let resident of this.singletonService.planetaDTO.residents">
+      <div>{{resident}}</div>
+    </div>
     <h5 class="card-title">Filmes</h5>
-    
+    <div *ngFor="let film of this.singletonService.planetaDTO.films">
+      <div>{{film}}</div>
+    </div>
   </div>
 </div>

@@ -20,4 +20,7 @@ export class FilmeService {
   ConsultarFilmesPagina(url: string): Observable<ILista> {
     return this.http.get<ILista>(url);
   } 
+  ConsultarFilme(url: string): Observable<IFilmeDTO> {
+    return this.http.get<IFilmeDTO>(url);
+  } 
 }

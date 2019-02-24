@@ -20,4 +20,7 @@ export class EspecieService {
   ConsultarEspeciePagina(url: string): Observable<ILista> {
     return this.http.get<ILista>(url);
   } 
+  ConsultarEspecie(url: string): Observable<IEspecieDTO> {
+    return this.http.get<IEspecieDTO>(url);
+  } 
 }

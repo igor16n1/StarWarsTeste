@@ -12,16 +12,25 @@
     <div>{{this.singletonService.filmeDTO.producer}}</div>
     <h5 class="card-title">Data de lançamento</h5>
     <div>{{this.singletonService.filmeDTO.release_date}}</div>
-
     <h5 class="card-title">Personagens</h5>
-
+    <div *ngFor="let character of this.singletonService.filmeDTO.characters">
+      <div>{{character}}</div>
+    </div>
     <h5 class="card-title">Planetas</h5>
-
+    <div *ngFor="let planet of this.singletonService.filmeDTO.planets">
+      <div>{{planet}}</div>
+    </div>
     <h5 class="card-title">Naves</h5>
-
+    <div *ngFor="let starship of this.singletonService.filmeDTO.starships">
+      <div>{{starship}}</div>
+    </div>
     <h5 class="card-title">Veículos</h5>
-
+    <div *ngFor="let vehicle of this.singletonService.filmeDTO.vehicles">
+      <div>{{vehicle}}</div>
+    </div>
     <h5 class="card-title">Espécies</h5>
-
+    <div *ngFor="let specie of this.singletonService.filmeDTO.species">
+      <div>{{specie}}</div>
+    </div>
   </div>
 </div>

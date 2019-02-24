@@ -16,11 +16,11 @@ export class NaveService {
 
   ConsultarNaves(): Observable<ILista> {
     return this.http.get<ILista>(environment.apiURL + '/' + this.controller);
-  }
-  ConsultarNave(id: number): Observable<INaveDTO> {
-    return this.http.get<INaveDTO>(environment.apiURL  + '/' + this.controller + id.toString() +'/');
-  }
+  }  
   ConsultarNavesPagina(url: string): Observable<ILista> {
     return this.http.get<ILista>(url);
-  } 
+  }
+  ConsultarNave(url: string): Observable<INaveDTO> {
+    return this.http.get<INaveDTO>(url);
+  }  
 }

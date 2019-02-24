@@ -1,5 +1,8 @@
 
 import { Component } from '@angular/core';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { ElementRef } from "@angular/core";
+import { ViewChild } from "@angular/core";
 
 @Component({
   selector: 'app-modal',
@@ -7,5 +10,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent {  
-  constructor() {}
+  @ViewChild('content') modal:ElementRef;
+  constructor(private modalService: NgbModal) {}
+  open() {
+    this.modalService.open(this.modal, {ariaLabelledBy: 'modal-basic-title'});
+  }
 }

@@ -19,5 +19,8 @@ export class PersonagensService {
   }  
   ConsultarPersonagensPagina(url: string): Observable<ILista> {
     return this.http.get<ILista>(url);
-  } 
+  }
+  ConsultarPersonagem(url: string): Observable<IPersonagem> {
+    return this.http.get<IPersonagem>(url);
+  }  
 }

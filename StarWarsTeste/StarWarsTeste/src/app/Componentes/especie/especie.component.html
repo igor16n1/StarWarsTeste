@@ -15,16 +15,18 @@
     <h5 class="card-title">Cor dos olhos</h5>
     <div>{{this.singletonService.especieDTO.eye_colors}}</div>
     <h5 class="card-title">Tempo de vida médio</h5>
-    <div>{{this.singletonService.especieDTO.average_lifespan}}</div>
-    
+    <div>{{this.singletonService.especieDTO.average_lifespan}}</div>    
     <h5 class="card-title">Terra natal</h5>
-    
+    <div>{{this.singletonService.especieDTO.homeworld}}</div>
     <h5 class="card-title">Idioma</h5>
     <div>{{this.singletonService.especieDTO.language}}</div>
-
     <h5 class="card-title">Pessoas</h5>
-
+    <div *ngFor="let person of this.singletonService.especieDTO.people">
+      <div>{{person}}</div>
+    </div>
     <h5 class="card-title">Filmes</h5>
-    
+    <div *ngFor="let film of this.singletonService.especieDTO.films">
+      <div>{{film}}</div>
+    </div>
   </div>
 </div>

@@ -17,10 +17,10 @@ export class PlanetaService {
   ConsultarPlanetas(): Observable<ILista> {
     return this.http.get<ILista>(environment.apiURL + '/' + this.controller);
   }
-  ConsultarPlaneta(id: number): Observable<IPlanetaDTO> {
-    return this.http.get<IPlanetaDTO>(environment.apiURL  + '/' + this.controller + id.toString() +'/');
-  }
   ConsultarPlanetasPagina(url: string): Observable<ILista> {
     return this.http.get<ILista>(url);
+  } 
+  ConsultarPlaneta(url: string): Observable<IPlanetaDTO> {
+    return this.http.get<IPlanetaDTO>(url);
   } 
 }
