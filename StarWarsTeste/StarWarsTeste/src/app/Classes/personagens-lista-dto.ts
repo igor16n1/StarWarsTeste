@@ -1,6 +1,6 @@
 import { PersonagemDTO } from './personagem-dto';
-import { IPersonagensLista } from './../Interfaces/ipersonagens-lista';
-export class PersonagensListaDTO implements IPersonagensLista {
+import { ILista } from './../Interfaces/ilista';
+export class PersonagensListaDTO implements ILista {
     count: number;
     next: string;
     previous?: any;

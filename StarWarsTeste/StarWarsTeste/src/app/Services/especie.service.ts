@@ -1,23 +1,23 @@
+import { IEspecieDTO } from './../Interfaces/iespecie-dto';
 import { environment } from './../../environments/environment.prod';
 import { ILista } from './../Interfaces/ilista';
-import { IPersonagem } from './../Interfaces/ipersonagem';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from "rxjs";
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PersonagensService {
+export class EspecieService {
 
-  controller: string = 'people/';
+  controller: string = 'species/';
 
   constructor(private http: HttpClient) { }
 
-  ConsultarPersonagens(): Observable<ILista> {
+  ConsultarEspecies(): Observable<ILista> {
     return this.http.get<ILista>(environment.apiURL + '/' + this.controller);
   }  
-  ConsultarPersonagensPagina(url: string): Observable<ILista> {
+  ConsultarEspeciePagina(url: string): Observable<ILista> {
     return this.http.get<ILista>(url);
   } 
 }

@@ -1,6 +1,6 @@
+import { IVeiculoDTO } from './../Interfaces/iveiculo-dto';
 import { environment } from './../../environments/environment.prod';
 import { ILista } from './../Interfaces/ilista';
-import { IPersonagem } from './../Interfaces/ipersonagem';
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -8,16 +8,19 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class PersonagensService {
+export class VeiculoService {
 
-  controller: string = 'people/';
+  controller: string = 'vehicles/';
 
   constructor(private http: HttpClient) { }
 
-  ConsultarPersonagens(): Observable<ILista> {
+  ConsultarVeiculos(): Observable<ILista> {
     return this.http.get<ILista>(environment.apiURL + '/' + this.controller);
-  }  
-  ConsultarPersonagensPagina(url: string): Observable<ILista> {
+  }
+  ConsultarVeiculo(id: number): Observable<IVeiculoDTO> {
+    return this.http.get<IVeiculoDTO>(environment.apiURL  + '/' + this.controller + id.toString() +'/');
+  }
+  ConsultarVeiculosPagina(url: string): Observable<ILista> {
     return this.http.get<ILista>(url);
   } 
 }

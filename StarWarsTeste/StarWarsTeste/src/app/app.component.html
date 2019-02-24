@@ -1,23 +1,23 @@
+<app-modal></app-modal>
 <article>
   <div class="container">
     <div class="row">
-      <div class="col-6">
+      <div class="col-5">
         <section>
-          <!--
           <ul>
-            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Personagens</button></li>
-            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Filmes</button></li>
-            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Naves</button></li>
-            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Veículos</button></li>
-            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Espécies</button></li>
-            <li><button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Planetas</button></li>
+            <li><button (click)="SelecionarCategoria(0)" type="button" class="btn btn-primary">Personagens</button></li>
+            <li><button (click)="SelecionarCategoria(1)" type="button" class="btn btn-primary">Filmes</button></li>
+            <li><button (click)="SelecionarCategoria(2)" type="button" class="btn btn-primary">Naves</button></li>
+            <li><button (click)="SelecionarCategoria(3)" type="button" class="btn btn-primary">Veículos</button></li>
+            <li><button (click)="SelecionarCategoria(4)" type="button" class="btn btn-primary">Espécies</button></li>
+            <li><button (click)="SelecionarCategoria(5)" type="button" class="btn btn-primary">Planetas</button></li>
           </ul>
-          -->
-          <div *ngIf="personagensListaDTO">
+          <div *ngIf="listaDTO">
             <table class="table">
               <tbody>
-                <tr *ngFor="let personagem of personagensListaDTO.results; index as i">
-                  <td (click)=" ConsultarInfo(personagem)">{{ personagem.name }}</td>
+                <tr *ngFor="let obj of listaDTO.results; index as i">                  
+                  <td *ngIf="obj.name" (click)=" ConsultarInfo(obj)">{{ obj.name }}</td>
+                  <td *ngIf="obj.title" (click)=" ConsultarInfo(obj)">{{ obj.title }}</td>
                 </tr>
               </tbody>
               <button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Anterior</button>
@@ -26,11 +26,11 @@
           </div>
         </section>
       </div>
-      <div class="col-6">
+      <div class="col-7">
         <section>
           <app-info></app-info>
         </section>
-      </div>
+      </div>      
     </div>
   </div>
 </article>

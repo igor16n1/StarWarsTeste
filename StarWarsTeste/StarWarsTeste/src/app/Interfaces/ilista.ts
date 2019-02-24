@@ -1,7 +1,7 @@
 import { IPersonagem } from './ipersonagem';
-export interface IPersonagensLista {
+export interface ILista {
     count: number;
     next: string;
     previous?: any;
-    results: IPersonagem[];
+    results: any[];
 }
