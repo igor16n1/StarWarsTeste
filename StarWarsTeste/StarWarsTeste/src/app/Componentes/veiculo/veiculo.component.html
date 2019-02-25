@@ -1,34 +1,40 @@
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Nome</h5>
-    <div>{{this.singletonService.veiculoDTO.name}}</div>
-    <h5 class="card-title">Modelo</h5>
-    <div>{{this.singletonService.veiculoDTO.model}}</div>
-    <h5 class="card-title">Fabricante</h5>
-    <div>{{this.singletonService.veiculoDTO.manufacturer}}</div>
-    <h5 class="card-title">Preço em créditos</h5>
-    <div>{{this.singletonService.veiculoDTO.cost_in_credits}}</div>
-    <h5 class="card-title">Comprimento</h5>
-    <div>{{this.singletonService.veiculoDTO.length}}</div>
-    <h5 class="card-title">Velocidade máxima na atmosfera</h5>
-    <div>{{this.singletonService.veiculoDTO.max_atmosphering_speed}}</div>
-    <h5 class="card-title">Tripulação</h5>
-    <div>{{this.singletonService.veiculoDTO.crew}}</div>
-    <h5 class="card-title">Passageiros</h5>
-    <div>{{this.singletonService.veiculoDTO.passengers}}</div>
-    <h5 class="card-title">Capacidade de carga</h5>
-    <div>{{this.singletonService.veiculoDTO.cargo_capacity}}</div>
-    <h5 class="card-title">Consumíveis</h5>
-    <div>{{this.singletonService.veiculoDTO.consumables}}</div>
-    <h5 class="card-title">Classe</h5>
-    <div>{{this.singletonService.veiculoDTO.vehicle_class}}</div>    
-    <h5 class="card-title">Pilotos</h5>
-    <div *ngFor="let pilot of this.singletonService.veiculoDTO.pilots">
-      <div>{{pilot}}</div>
-    </div>
-    <h5 class="card-title">Filmes</h5>
-    <div *ngFor="let film of this.singletonService.veiculoDTO.films">
-      <div>{{film}}</div>
+    <div class="row">
+      <div class="col-lg-6 col-md-12 centralizar">
+        <h5 class="card-title">Nome</h5>
+        <div class="espacamento">{{this.singletonService.veiculoDTO.name}}</div>
+        <h5 class="card-title">Modelo</h5>
+        <div class="espacamento">{{this.singletonService.veiculoDTO.model}}</div>
+        <h5 class="card-title">Fabricante</h5>
+        <div class="espacamento">{{this.singletonService.veiculoDTO.manufacturer}}</div>
+        <h5 class="card-title">Preço em créditos</h5>
+        <div class="espacamento">{{this.singletonService.veiculoDTO.cost_in_credits}}</div>
+        <h5 class="card-title">Comprimento</h5>
+        <div class="espacamento">{{this.singletonService.veiculoDTO.length}}</div>
+        <h5 class="card-title">Velocidade máxima na atmosfera</h5>
+        <div class="espacamento">{{this.singletonService.veiculoDTO.max_atmosphering_speed}}</div>
+        <h5 class="card-title">Tripulação</h5>
+        <div class="espacamento">{{this.singletonService.veiculoDTO.crew}}</div>
+        <h5 class="card-title">Passageiros</h5>
+        <div class="espacamento">{{this.singletonService.veiculoDTO.passengers}}</div>
+      </div>
+      <div class="col-lg-6 col-md-12 centralizar">        
+        <h5 class="card-title">Capacidade de carga</h5>
+        <div class="espacamento">{{this.singletonService.veiculoDTO.cargo_capacity}}</div>
+        <h5 class="card-title">Consumíveis</h5>
+        <div class="espacamento">{{this.singletonService.veiculoDTO.consumables}}</div>
+        <h5 class="card-title">Classe</h5>
+        <div class="espacamento">{{this.singletonService.veiculoDTO.vehicle_class}}</div>
+        <h5 class="card-title">Pilotos</h5>
+        <div *ngFor="let pilot of this.singletonService.veiculoDTO.pilots">
+          <div class="espacamento">{{pilot}}</div>
+        </div>
+        <h5 class="card-title">Filmes</h5>
+        <div *ngFor="let film of this.singletonService.veiculoDTO.films">
+          <div class="espacamento">{{film}}</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

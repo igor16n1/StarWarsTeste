@@ -1,38 +1,44 @@
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Nome</h5>
-    <div>{{this.singletonService.naveDTO.name}}</div>
-    <h5 class="card-title">Modelo</h5>
-    <div>{{this.singletonService.naveDTO.model}}</div>
-    <h5 class="card-title">Fabricante</h5>
-    <div>{{this.singletonService.naveDTO.manufacturer}}</div>
-    <h5 class="card-title">Preço em créditos</h5>
-    <div>{{this.singletonService.naveDTO.cost_in_credits}}</div>
-    <h5 class="card-title">Comprimento</h5>
-    <div>{{this.singletonService.naveDTO.length}}</div>
-    <h5 class="card-title">Velocidade máxima na atmosfera</h5>
-    <div>{{this.singletonService.naveDTO.max_atmosphering_speed}}</div>
-    <h5 class="card-title">Tripulação</h5>
-    <div>{{this.singletonService.naveDTO.crew}}</div>
-    <h5 class="card-title">Passageiros</h5>
-    <div>{{this.singletonService.naveDTO.passengers}}</div>
-    <h5 class="card-title">Capacidade de carga</h5>
-    <div>{{this.singletonService.naveDTO.cargo_capacity}}</div>
-    <h5 class="card-title">Consumíveis</h5>
-    <div>{{this.singletonService.naveDTO.consumables}}</div>
-    <h5 class="card-title">Hyperdrive rating</h5>
-    <div>{{this.singletonService.naveDTO.hyperdrive_rating}}</div>
-    <h5 class="card-title">MGLT</h5>
-    <div>{{this.singletonService.naveDTO.MGLT}}</div>
-    <h5 class="card-title">Classe</h5>
-    <div>{{this.singletonService.naveDTO.starship_class}}</div>    
-    <h5 class="card-title">Pilotos</h5>
-    <div *ngFor="let pilot of this.singletonService.naveDTO.pilots">
-      <div>{{pilot}}</div>
-    </div>
-    <h5 class="card-title">Filmes</h5>
-    <div *ngFor="let film of this.singletonService.naveDTO.films">
-      <div>{{film}}</div>
+    <div class="row">
+      <div class="col-lg-6 col-md-12 centralizar">
+        <h5 class="card-title">Nome</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.name}}</div>
+        <h5 class="card-title">Modelo</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.model}}</div>
+        <h5 class="card-title">Fabricante</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.manufacturer}}</div>
+        <h5 class="card-title">Preço em créditos</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.cost_in_credits}}</div>
+        <h5 class="card-title">Comprimento</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.length}}</div>
+        <h5 class="card-title">Velocidade máxima na atmosfera</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.max_atmosphering_speed}}</div>
+        <h5 class="card-title">Tripulação</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.crew}}</div>
+        <h5 class="card-title">Passageiros</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.passengers}}</div>
+      </div>
+      <div class="col-lg-6 col-md-12 centralizar">
+        <h5 class="card-title">Capacidade de carga</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.cargo_capacity}}</div>
+        <h5 class="card-title">Consumíveis</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.consumables}}</div>
+        <h5 class="card-title">Hyperdrive rating</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.hyperdrive_rating}}</div>
+        <h5 class="card-title">MGLT</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.MGLT}}</div>
+        <h5 class="card-title">Classe</h5>
+        <div class="espacamento">{{this.singletonService.naveDTO.starship_class}}</div>
+        <h5 class="card-title">Pilotos</h5>
+        <div *ngFor="let pilot of this.singletonService.naveDTO.pilots">
+          <div class="espacamento">{{pilot}}</div>
+        </div>
+        <h5 class="card-title">Filmes</h5>
+        <div *ngFor="let film of this.singletonService.naveDTO.films">
+          <div class="espacamento">{{film}}</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -29,5 +29,7 @@ export class TratamentoErro {
     {
         this.tratamentoErroDTO.codigo = codigo;
         this.tratamentoErroDTO.mensagem = mensagem;
+        this.singletonService.erro = this.tratamentoErroDTO.codigo;
+        this.singletonService.mensagem = this.tratamentoErroDTO.mensagem;
     }
 }

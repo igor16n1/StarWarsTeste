@@ -1,3 +1,4 @@
+import { SingletonService } from './../../Services/singleton.service';
 
 import { Component } from '@angular/core';
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
@@ -11,7 +12,7 @@ import { ViewChild } from "@angular/core";
 })
 export class ModalComponent {  
   @ViewChild('content') modal:ElementRef;
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal, public singletonService: SingletonService) {}
   open() {
     this.modalService.open(this.modal, {ariaLabelledBy: 'modal-basic-title'});
   }

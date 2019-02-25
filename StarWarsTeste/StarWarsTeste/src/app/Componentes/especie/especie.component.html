@@ -1,32 +1,38 @@
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Nome</h5>
-    <div>{{this.singletonService.especieDTO.name}}</div>
-    <h5 class="card-title">Classificação</h5>
-    <div>{{this.singletonService.especieDTO.classification}}</div>
-    <h5 class="card-title">Designação</h5>
-    <div>{{this.singletonService.especieDTO.designation}}</div>
-    <h5 class="card-title">Altura média</h5>
-    <div>{{this.singletonService.especieDTO.average_height}}</div>
-    <h5 class="card-title">Cor da pele</h5>
-    <div>{{this.singletonService.especieDTO.skin_colors}}</div>
-    <h5 class="card-title">Cor do cabelo</h5>
-    <div>{{this.singletonService.especieDTO.hair_colors}}</div>
-    <h5 class="card-title">Cor dos olhos</h5>
-    <div>{{this.singletonService.especieDTO.eye_colors}}</div>
-    <h5 class="card-title">Tempo de vida médio</h5>
-    <div>{{this.singletonService.especieDTO.average_lifespan}}</div>    
-    <h5 class="card-title">Terra natal</h5>
-    <div>{{this.singletonService.especieDTO.homeworld}}</div>
-    <h5 class="card-title">Idioma</h5>
-    <div>{{this.singletonService.especieDTO.language}}</div>
-    <h5 class="card-title">Pessoas</h5>
-    <div *ngFor="let person of this.singletonService.especieDTO.people">
-      <div>{{person}}</div>
-    </div>
-    <h5 class="card-title">Filmes</h5>
-    <div *ngFor="let film of this.singletonService.especieDTO.films">
-      <div>{{film}}</div>
+    <div class="row">
+      <div class="col-lg-6 col-md-12 centralizar">
+        <h5 class="card-title">Nome</h5>
+        <div class="espacamento">{{this.singletonService.especieDTO.name}}</div>
+        <h5 class="card-title">Classificação</h5>
+        <div class="espacamento">{{this.singletonService.especieDTO.classification}}</div>
+        <h5 class="card-title">Designação</h5>
+        <div class="espacamento">{{this.singletonService.especieDTO.designation}}</div>
+        <h5 class="card-title">Altura média</h5>
+        <div class="espacamento">{{this.singletonService.especieDTO.average_height}}</div>
+        <h5 class="card-title">Cor da pele</h5>
+        <div class="espacamento">{{this.singletonService.especieDTO.skin_colors}}</div>
+        <h5 class="card-title">Cor do cabelo</h5>
+        <div class="espacamento">{{this.singletonService.especieDTO.hair_colors}}</div>
+        <h5 class="card-title">Cor dos olhos</h5>
+        <div class="espacamento">{{this.singletonService.especieDTO.eye_colors}}</div>
+        <h5 class="card-title">Tempo de vida médio</h5>
+        <div class="espacamento">{{this.singletonService.especieDTO.average_lifespan}}</div>
+      </div>
+      <div class="col-lg-6 col-md-12 centralizar">
+        <h5 class="card-title">Terra natal</h5>
+        <div class="espacamento">{{this.singletonService.especieDTO.homeworld}}</div>
+        <h5 class="card-title">Idioma</h5>
+        <div class="espacamento">{{this.singletonService.especieDTO.language}}</div>
+        <h5 class="card-title">Pessoas</h5>
+        <div *ngFor="let person of this.singletonService.especieDTO.people">
+          <div class="espacamento">{{person}}</div>
+        </div>
+        <h5 class="card-title">Filmes</h5>
+        <div *ngFor="let film of this.singletonService.especieDTO.films">
+          <div class="espacamento">{{film}}</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

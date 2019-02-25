@@ -31,6 +31,15 @@ export class AppComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   listaDTO: ListaDTO;
   tratamentoErro: TratamentoErro;
+  titulos: string[] = [
+    'Personagem',
+    'Filme',
+    'Nave',
+    'veículo',
+    'Espécie',    
+    'Planeta'    
+  ];
+  titulo: string = '';
   @ViewChild('modal') modal: ElementRef;
   constructor(
     public singletonService: SingletonService,
@@ -43,6 +52,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    this.titulo = this.titulos[0];
     this.singletonService.modal = this.modal;
     this.tratamentoErro = new TratamentoErro(this.singletonService);
     this.singletonService.categoriaBusca = CategoriaBusca.Personagem;
@@ -115,7 +125,7 @@ export class AppComponent implements OnInit, OnDestroy {
       );
   }
   //Consulta informação de objeto selecionado
-  ConsultarInfo(obj: any) {
+  ConsultarInfo(obj: any) {   
     if (CategoriaBusca.Especie == this.singletonService.categoriaBusca) {
       this.singletonService.especieDTO = obj;      
       if (obj.homeworld.substring(0, 4) == 'http') {
@@ -257,6 +267,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
   //Seleciona categoria
   SelecionarCategoria(id: number) {
+    this.titulo = this.titulos[id];//<-
     this.singletonService.categoriaBusca = id;
     if (CategoriaBusca.Especie == this.singletonService.categoriaBusca) {
       this.ConsultarEspecies();

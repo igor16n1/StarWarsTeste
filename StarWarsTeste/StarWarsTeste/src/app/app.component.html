@@ -1,36 +1,62 @@
 <app-modal #modal></app-modal>
-<article>
+<article class="posicaoMenu">
   <div class="container">
     <div class="row">
-      <div class="col-5">
+      <div class="col-lg-2 col-sm-12 centralizar">
         <section>
-          <ul>
-            <li><button (click)="SelecionarCategoria(0)" type="button" class="btn btn-primary">Personagens</button></li>
-            <li><button (click)="SelecionarCategoria(1)" type="button" class="btn btn-primary">Filmes</button></li>
-            <li><button (click)="SelecionarCategoria(2)" type="button" class="btn btn-primary">Naves</button></li>
-            <li><button (click)="SelecionarCategoria(3)" type="button" class="btn btn-primary">Veículos</button></li>
-            <li><button (click)="SelecionarCategoria(4)" type="button" class="btn btn-primary">Espécies</button></li>
-            <li><button (click)="SelecionarCategoria(5)" type="button" class="btn btn-primary">Planetas</button></li>
-          </ul>
-          <div *ngIf="listaDTO">
+          <h3>Selecione</h3>
+          <div class="row">
+            <div class="col-12">
+              <ul class="alinharMenuIcones">
+                <li><button (click)="SelecionarCategoria(0)" type="button" class="btn btn-primary"><div class="iconPersonagem"></div></button></li>
+                <li><button (click)="SelecionarCategoria(1)" type="button" class="btn btn-primary"><div class="iconFilme"></div></button></li>
+                <li><button (click)="SelecionarCategoria(2)" type="button" class="btn btn-primary"><div class="iconNaves"></div></button></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="alinharMenuIcones">
+                <li><button (click)="SelecionarCategoria(3)" type="button" class="btn btn-primary"><div class="iconVehi"></div></button></li>
+                <li><button (click)="SelecionarCategoria(4)" type="button" class="btn btn-primary"><div class="iconEspecie"></div></button></li>
+                <li><button (click)="SelecionarCategoria(5)" type="button" class="btn btn-primary"><div class="iconPlanetas"></div></button></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row posicaoMenuBckForward">
+            <div class="col-12">
+              <ul class="alinharMenuIcones">
+                <li>
+                  <button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">
+                <div class="iconLeft"></div>
+              </button>
+                </li>
+                <li>
+                  <button (click)="ConsultarPaginaPosterior()" type="button" class="btn btn-primary">
+                    <div class="iconRight"></div>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div *ngIf="listaDTO" class="posicaoMenu">
             <table class="table">
               <tbody>
-                <tr *ngFor="let obj of listaDTO.results; index as i">                  
+                <tr *ngFor="let obj of listaDTO.results; index as i">
                   <td *ngIf="obj.name" (click)=" ConsultarInfo(obj)">{{ obj.name }}</td>
                   <td *ngIf="obj.title" (click)=" ConsultarInfo(obj)">{{ obj.title }}</td>
                 </tr>
               </tbody>
-              <button (click)="ConsultarPaginaAnterior()" type="button" class="btn btn-primary">Anterior</button>
-              <button (click)="ConsultarPaginaPosterior()" type="button" class="btn btn-primary">Próxima</button>
             </table>
           </div>
         </section>
       </div>
-      <div class="col-7">
+      <div class="col-lg-10 col-sm-12">
         <section>
+          <h3 class="centralizar">{{titulo}}</h3>
           <app-info></app-info>
         </section>
-      </div>      
+      </div>
     </div>
   </div>
 </article>

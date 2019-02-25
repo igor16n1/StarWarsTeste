@@ -1,38 +1,45 @@
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Nome</h5>
-    <div>{{this.singletonService.personagemDTO.name}}</div>
-    <h5 class="card-title">Altura</h5>
-    <div>{{this.singletonService.personagemDTO.height}}</div>
-    <h5 class="card-title">Peso</h5>
-    <div>{{this.singletonService.personagemDTO.mass}}</div>
-    <h5 class="card-title">Cor do Cabelo</h5>
-    <div>{{this.singletonService.personagemDTO.hair_color}}</div>
-    <h5 class="card-title">Cor da pele</h5>
-    <div>{{this.singletonService.personagemDTO.skin_color}}</div>
-    <h5 class="card-title">Cor dos olhos</h5>
-    <div>{{this.singletonService.personagemDTO.eye_color}}</div>
-    <h5 class="card-title">Nascimento</h5>
-    <div>{{this.singletonService.personagemDTO.birth_year}}</div>
-    <h5 class="card-title">Gênero</h5>
-    <div>{{this.singletonService.personagemDTO.gender}}</div>
-    <h5 class="card-title">Terra natal</h5>
-    <div>{{this.singletonService.personagemDTO.homeworld}}</div>
-    <h5 class="card-title">Filmes</h5>    
-    <div *ngFor="let film of this.singletonService.personagemDTO.films">
-      <div>{{film}}</div>
+    <div class="row">
+      <div class="col-lg-6 col-md-12 centralizar">
+        <h5 class="card-title">Nome</h5>
+        <div class="espacamento">{{this.singletonService.personagemDTO.name}}</div>
+        <h5 class="card-title">Altura</h5>
+        <div class="espacamento">{{this.singletonService.personagemDTO.height}}</div>
+        <h5 class="card-title">Peso</h5>
+        <div class="espacamento">{{this.singletonService.personagemDTO.mass}}</div>
+        <h5 class="card-title">Cor do Cabelo</h5>
+        <div class="espacamento">{{this.singletonService.personagemDTO.hair_color}}</div>
+        <h5 class="card-title">Cor da pele</h5>
+        <div class="espacamento">{{this.singletonService.personagemDTO.skin_color}}</div>
+        <h5 class="card-title">Cor dos olhos</h5>
+        <div class="espacamento">{{this.singletonService.personagemDTO.eye_color}}</div>
+        <h5 class="card-title">Nascimento</h5>
+        <div class="espacamento">{{this.singletonService.personagemDTO.birth_year}}</div>
+        <h5 class="card-title">Gênero</h5>
+        <div class="espacamento">{{this.singletonService.personagemDTO.gender}}</div>
+      </div>
+      <div class="col-lg-6 col-md-12 centralizar">
+        <h5 class="card-title">Terra natal</h5>
+        <div class="espacamento">{{this.singletonService.personagemDTO.homeworld}}</div>
+        <h5 class="card-title">Filmes</h5>
+        <div *ngFor="let film of this.singletonService.personagemDTO.films">
+          <div class="espacamento">{{film}}</div>
+        </div>
+        <h5 class="card-title">Espécies</h5>
+        <div *ngFor="let specie of this.singletonService.personagemDTO.species">
+          <div class="espacamento">{{specie}}</div>
+        </div>
+        <h5 class="card-title">Veículos</h5>
+        <div *ngFor="let vehicle of this.singletonService.personagemDTO.vehicles">
+          <div class="espacamento">{{vehicle}}</div>
+        </div>
+        <h5 class="card-title">Naves</h5>
+        <div *ngFor="let starship of this.singletonService.personagemDTO.starships">
+          <div class="espacamento">{{starship}}</div>
+        </div>
+      </div>
     </div>
-    <h5 class="card-title">Espécies</h5>
-    <div *ngFor="let specie of this.singletonService.personagemDTO.species">
-      <div>{{specie}}</div>
-    </div>
-    <h5 class="card-title">Veículos</h5>
-    <div *ngFor="let vehicle of this.singletonService.personagemDTO.vehicles">
-      <div>{{vehicle}}</div>
-    </div>
-    <h5 class="card-title">Naves</h5>
-    <div *ngFor="let starship of this.singletonService.personagemDTO.starships">
-      <div>{{starship}}</div>
-    </div>
+
   </div>
 </div>

@@ -1,1 +1,159 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Starjedi';
+  src: url('/assets/Starjedi.ttf');
+}
+@font-face {
+  font-family: 'Universal';
+  src: url('/assets/Universal Serif.ttf');
+}
+body {
+  background-color: #0b0b0c;
+  font-family: 'Universal';
+  color: white!important;
+}
+.card {
+ background-color: #fff0!important;
+}
+@media (min-width: 1200px)
+{
+    .container {
+        max-width: 90%!important;
+    }
+}
+h5 {
+  color: #ffe81f;
+}
+ul {
+  list-style-type: none;
+}
+table, th, td {  
+  border: 4px solid #ffe81f;
+  border-top: none !important;  
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.btn-primary {
+    color: #ffe81f!important;
+    background-color: #fff0!important;
+    border-color: #ffe81f!important;
+    width: 50px!important;
+    height: 50px!important;
+    border-radius:0px;
+    border: 3px solid #ffe81f;
+    cursor: pointer;
+    outline: none!important;
+    box-shadow: none!important
+}
+.btn-primary:active:after:hover {
+    color: #ffe81f!important;
+    background-color: #fff0!important;
+    border-color: #ffe81f!important;
+    outline: none!important;
+}
+h3{
+    font-family: 'Starjedi';
+    font-size: 40px;
+    color: #ffe81f;
+}
+.iconLeft{
+    width: 25px;
+    height: 25px;
+    background: url('/assets/Arrow.png') 0px 0 !important;
+    position: relative;
+    left: -5px;     
+}
+.iconRight{
+    width: 25px;
+    height: 25px;
+    background: url('/assets/Arrow.png') 0px 0 !important;
+    position: relative;
+    left: 0px;
+    transform: rotate(180deg);
+}
+.iconPersonagem{
+    width: 35px;
+    height: 35px;
+    background: url('/assets/Stormtrooper-icon.png') 0px 0 !important;
+    position: relative;
+    left: -7px;
+    top: -2px;
+}
+.iconFilme{
+    width: 35px;
+    height: 35px;
+    background: url('/assets/movies-icon.png') 0px 0 !important;
+    position: relative;
+    left: -7px;
+    top: -2px;
+}
+.iconNaves{
+    width: 35px;
+    height: 35px;
+    background: url('/assets/Millennium-Falcon-icon.png') 0px 0 !important;
+    position: relative;
+    left: -7px;
+    top: -2px;
+}
+.iconVehi{
+    width: 35px;
+    height: 29px;
+    background: url('/assets/vehi-icon.png') 0px 0 !important;
+    position: relative;
+    left: -7px;
+    top: 0px;
+}
+.iconEspecie{
+    width: 35px;
+    height: 35px;
+    background: url('/assets/Chewbacca-icon.png') 0px 0 !important;
+    position: relative;
+    left: -7px;
+    top: -2px;
+}
+.iconPlanetas{
+    width: 35px;
+    height: 35px;
+    background: url('/assets/Death-Star-icon.png') 0px 0 !important;
+    position: relative;
+    left: -7px;
+    top: -2px;
+}
+.alinharMenuIcones li {
+    float:left;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.posicaoMenuBckForward{
+    margin-top: 25px;
+    margin-left: 15px;
+}
+.posicaoMenu{
+    margin-top: 25px;    
+}
+td{
+ cursor: pointer;   
+}
+.espacamento
+{
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.centralizar
+{     
+    text-align: center; 
+}
+.modal-content { 
+    background-color: black!important;
+    height: 450px!important;
+    box-shadow: 0px 0px 80px 10px #fe001a!important;    
+}
+.iconErro{
+    width: 282px;
+    height: 298px;
+    background: url('/assets/darth.png') 0px 0 !important;
+    position: relative;
+    left: 20%;
+    right: 20%;
+    top: 10px;
+}

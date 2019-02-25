@@ -20,12 +20,16 @@ export class SingletonService {
   public veiculoDTO: VeiculoDTO;
   public categoriaBusca: CategoriaBusca;
   public modal: any;
+  public erro: string;
+  public mensagem: string;
   constructor() { 
     this.personagemDTO = new PersonagemDTO();
     this.especieDTO = new EspecieDTO();  
     this.filmeDTO = new FilmeDTO();
     this.naveDTO = new NaveDTO();
     this.planetaDTO = new PlanetaDTO();
-    this.veiculoDTO = new VeiculoDTO();    
+    this.veiculoDTO = new VeiculoDTO();
+    this.erro = '';
+    this.mensagem = '';
   }
 }
